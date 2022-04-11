@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" href="stylemenu.css">
+    <style>
+         @font-face {
+            font-family: "Bitstream Vera Serif Bold";
+            src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+        }
+        body {
+            animation-duration: 5s;
+            animation-name: example;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #text {
+            border: 2px solid yellow;
+            border-radius: 50px;
+            background: #40a5c4;
+            background-image: url('https://c8.alamy.com/compes/wc4dm9/construccion-de-politechnika-wroclawska-con-algunos-arboles-delante-wc4dm9.jpg');
+            background-position: center;
+        }
+
+        #text2 {
+            border: 2px;
+            border-radius: 50px;
+            background: hsla(120, 70%, 85%, 0.25);
+            padding: 5%;
+            box-shadow: 15px 5px red, 15px 15px white;
+            background-image: url('https://c8.alamy.com/compes/wc4dm9/construccion-de-politechnika-wroclawska-con-algunos-arboles-delante-wc4dm9.jpg');
+            background-origin: padding-box;
+            background-position: bottom;
+        }
+
+        .img {
+            border: 10px solid black;
+            padding: 15px;
+            width: 70%;
+            top: 50%;
+            left: 50%;
+            border-image-source: repeating-linear-gradient(45deg, transparent, #4d9f0c 20px) 33%;
+            text-align: center;
+            font-family: "Bitstream Vera Serif Bold", serif;
+            text-shadow: 3px;
+            text-shadow: darkblue;
+        }
+
+        @keyframes example {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+            }
+        }
+        
+
+        .flex-container {
+            /* We first create a flex layout context */
+            display: flex;
+            flex-flow:wrap;
+            
+            /* Then we define how is distributed the remaining space */
+            justify-content: center;
+            
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            flex-basis: auto;
+        }
+        .flex-item:hover{
+            background: darkblue;
+            width: 250px;
+            height: 200px;
+        }
+
+        .flex-item {
+            background: lightblue;
+            padding: 5px;
+            width: 200px;
+            height: 150px;
+            margin-top: 10px;
+            line-height: 150px;
+            color: white;
+            font-weight: bold;
+            font-size: small;
+            text-align: center;
+            border-radius: 5%;
+            column-gap: normal;
+            column-count: 2;
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Computer Science</a>
+                <ul>
+                    <li><a href="">Frontend</a></li>
+                    <li><a href="">Backend</a></li>
+                </ul>
+            </li>
+            <li><a href="">Pages</a>
+                <ul>
+                    <li><a href="index.html">Index</a></li>
+                    <li><a href="personal.html">Form</a></li>
+                    <li><a href="moretext.html">Citys</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+    <br>
+    <div id="text">
+        <h2 style="text-align:center; color:yellow;">More practise!</h2>
+    </div>
+    <br>
+    <div id="text2">
+        <h2 style="text-align:center; color:yellow;">More text!</h2>
+        <p>Nikola Tesla (en serbio, Никола Тесла; Smiljan, Imperio austríaco, actual Croacia; 10 de julio de 1856-Nueva
+            York, 7 de enero de 1943) fue un inventor, ingeniero eléctrico y mecánico serbio nacionalizado
+            estadounidense.1​2​3​ Se le conoce sobre todo por sus numerosas invenciones en el campo del
+            electromagnetismo, desarrolladas a finales del siglo XIX y principios del siglo XX. Las patentes de Tesla y
+            su trabajo teórico ayudaron a forjar las bases de los sistemas modernos para el uso de la energía eléctrica
+            por corriente alterna (CA), lo que incluye el sistema polifásico de distribución eléctrica y el motor de
+            corriente alterna, que contribuyeron al surgimiento de la Segunda Revolución Industrial.4​ </p>
+    </div>
+    <br>
+    <div class="img">
+        <p>Web Systems Programming</p>
+    </div>
+    <br>
+    <div>
+        <ul class="flex-container">
+            <li class="flex-item"><p>Welcome to Wroclaw!</p></li>
+            <li class="flex-item">Web</li>
+            <li class="flex-item">Systems</li>
+            <li class="flex-item">Programming</li>
+        </ul>
+    </div>
+    <br>
+</body>
+
+</html>

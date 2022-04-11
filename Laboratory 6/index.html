@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML LAB 3</title>
+        <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {background-color: paleturquoise;}
+        p {color: green;}
+        table{
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid blue;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <h1 id="title_text">Welcome to Start Page!</h1>
+        <section>
+        <article>
+            <h2>
+                <a href="personal.html">Personal form</a>
+            </h2>
+            <p>A page that will contain the personal form.</p>
+            <img width="50px"src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/User-info.svg/1024px-User-info.svg.png">
+        </article>
+        </section>
+        <article>
+            <h2>
+                <a href="additional.html">Additional information</a>
+            </h2>
+            <p>A page that will contain additional information about the user.</p>
+        </article>
+        <br>
+
+        
+
+        
+
+        <!-- <button id = "button">Press to show text using JavaScript</button> -->
+        
+
+        
+  
+  
+        <br><br><br>
+        
+
+        <table class="lab2" border="2">
+            <!-- First row-->
+            <tr>
+                <td colspan="3">
+                    <a href="https://github.com/"> GitHub </a>
+                </td>
+                <td>
+                    <p> X </p>
+                </td>    
+                <td>
+                    <p> Y </p>
+                </td>
+                </tr>
+                <!-- Second row -->
+                <tr>
+                <td>
+                    <p> A </p>
+                </td>
+                <td>
+                    <p> B </p>
+                </td>
+                <td colspan="2" rowspan="3">
+                    <p>
+                        <img src="https://wroclife.pl/wp-content/uploads/2017/03/DWARWSY_0002_Wroclover.jpg"
+                            width = "200ppx"> 
+                    </p>
+                </td>
+                <td>
+                    <p> Z </p>
+                </td>
+                </tr>        
+                <!-- Third row -->
+                <tr> 
+                <td>
+                    <p> C </p>
+                </td>          
+                <td>
+                    <p> D </p>
+                </td>  
+                <td rowspan="3">
+                    <p>&copy;</p>
+                </td>        
+                </tr>
+                <!-- Forth row -->
+                <tr>
+                <td>
+                    <p> E </p>
+                </td>
+                <td>
+                    <a href="calculator.html">Hexadecimal calculator</a>
+                </td>s
+                </tr>
+                <!-- Last row -->
+                <tr>
+                <td>
+                    <p> 1 </p>
+                </td>
+                <td>
+                    <p> 2 </p>
+                </td>
+                <td>
+                    <p> 3 </p>
+                </td>
+                <td>
+                    <p> 4 </p>
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <h2>
+            <a href="menu.html">Menu page</a>
+        </h2>
+
+        <h2>
+            <a href="moretext.html">More Text Here</a>
+        </h2>
+        <p>A page that will contain more text.</p>
+        <br>
+        <script type="text/javascript" src="functions.js"></script>
+        <script type="text/javascript">
+            var title = document.getElementById("title_text");
+            title.style.color = "Red";
+            var name = window.prompt("Please enter your name: ");
+
+            document.write("<h1 style = 'color:red'>");
+            document.write(name + " have wrotten this text using JavaScript.");
+            document.writeln("</h1>"); 
+        </script>
+
+        <footer style="font-family: 'monospace', cursive"; color: darkgreen;>
+            <p>Author: &copy; Nordin El Balima Cordero & Alberto Hernandez Lado</p>
+            <p><a href="mailto:students@gmail.com.com">students@gmail.com</a></p>
+        </footer> 
+    </body>
+</html>

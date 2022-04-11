@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GAME</title>
+    <link rel="style" href="style.css">
+</head>
+
+<style>
+    .rectangle {
+        height: 400px;
+        width: 500px;
+        background-color: rgb(146, 146, 146);
+        border: 3px solid rgb(39, 39, 255);
+    }
+</style>
+
+<body>
+
+<h1>Game</h1>
+
+<p>When you hover your mouse over the gray rectangle, the page will prompt you to start the game. If you don't want to play, it will still be waiting for you to hover your mouse over the gray rectangle. If you want to play, 5 colored squares will appear in the gray rectangle: "yellow", "pink", "green", "magenta", "orange". Each square disappears when you click and you get a point. However, the yellow square is unique, to delete it, you must additionally press the CTRL key (for the remaining squares it must be released). However, after clicking the remaining squares, you can score an additional point by entering the fast letter of the color in the text field (under the gray rectangle). The entered letter will disappear immediately. If you get the maximum number of points, you will be informed about it. </p>
+
+<h2 id = "points_paragraph">Points: 0</h2>
+
+<div id="rectangleGame" class="rectangle"></div>
+<input id = "letter" type="text">
+
+<script defer>
+    let rectangleGame = document.getElementById("rectangleGame");
+    var x, y, i, coord, coordsList;
+    var play = false;
+    var points = 0;
+    document.body.style.backgroundSize = "cover";
+    let color_list = ["yellow", "pink", "green", "magenta", "orange"];
+    //rectangleGame.addEventListener("mouseover", function(e) {
+        //if(!play) 
+            //if(confirm("Do you want to play?")) {
+                i = 0;
+                coord = [];
+                coordsList = [];
+                for (let color of color_list) {
+                    var square = document.createElement("div");
+                    square.setAttribute("id", color);
+                    square.style.width = "50px";
+                    square.style.height = "50px";
+                    square.style.background = color;
+                    square.style.position = "relative";
+                    do { 
+                        x = Math.random() * 450;
+                        y = Math.random() * 350 - i;
+                        
+                    }while (!coordsList.every(function(element) {return (x < element[0]-50 || x > element[0]+50 ) && (y < element[1]-50 || y > element[1]+50 )}));
+                    coord = [x, y];
+                    coordsList.push(coord);
+                    i = i + 50;
+                    square.style.left = x + "px";
+                    square.style.top = y + "px";
+                    document.getElementById("rectangleGame").appendChild(square);
+                }
+                play = true;
+            //}   
+    //})
+
+    var points_paragraph = document.getElementById("points_paragraph");
+    var input = document.getElementById("letter");
+    var yellow_clicked = false;
+    var pink_clicked = false;
+    var green_clicked = false;
+    var magenta_clicked = false;
+    var orange_clicked = false;
+
+    var yellow = document.getElementById("yellow");
+    yellow.addEventListener("mousedown", function(e) {
+        document.body.onclick = function (e) {
+            if (e.ctrlKey && !yellow_clicked) {
+                yellow.style.background = "rgb(146, 146, 146)";
+                if (input.value == "y" || input.value == "Y") { points++; input.value = ""}
+                points++;
+                if (points == 10) {
+                    points_paragraph.innerHTML = "Points: " + points + " MAX. POINTS!"; 
+                    document.body.style.backgroundImage = "url('congratulation.jpg')";
+                    points_paragraph.style.color = "white";
+                }
+                else points_paragraph.innerHTML = "Points: " + points;
+                yellow_clicked = true;
+            }
+        }
+    })
+
+    var pink = document.getElementById("pink");
+    pink.addEventListener("mousedown", function(e) {
+        if (!pink_clicked) {
+            pink.style.background = "rgb(146, 146, 146)";
+            if (input.value == "p" || input.value == "P") { points++; input.value = ""}
+            points++;
+            if (points == 10) {
+                points_paragraph.innerHTML = "Points: " + points + " MAX. POINTS!"; 
+                document.body.style.backgroundImage = "url('congratulation.jpg')";
+                points_paragraph.style.color = "white";
+            }
+            else points_paragraph.innerHTML = "Points: " + points;
+            pink_clicked = true;
+        }
+    })
+
+    var green = document.getElementById("green");
+    green.addEventListener("mousedown", function(e) {
+        if (!green_clicked) {
+            green.style.background = "rgb(146, 146, 146)";
+            if (input.value == "g" || input.value == "G") { points++; input.value = ""}
+            points++;
+            if (points == 10) {
+                points_paragraph.innerHTML = "Points: " + points + " MAX. POINTS!"; 
+                document.body.style.backgroundImage = "url('congratulation.jpg')";
+                points_paragraph.style.color = "white";
+            }
+            else points_paragraph.innerHTML = "Points: " + points;
+            green_clicked = true;
+        }
+    })
+    
+    var magenta = document.getElementById("magenta");
+    magenta.addEventListener("mousedown", function(e) {
+        if (!magenta_clicked) {
+            magenta.style.background = "rgb(146, 146, 146)";
+            if (input.value == "m" || input.value == "M") { points++; input.value = ""}
+            points++;
+            if (points == 10) {
+                points_paragraph.innerHTML = "Points: " + points + " MAX. POINTS!"; 
+                document.body.style.backgroundImage = "url('congratulation.jpg')";
+                points_paragraph.style.color = "white";
+            }
+            else points_paragraph.innerHTML = "Points: " + points;
+            magenta_clicked = true;
+        }
+    })
+
+    var orange = document.getElementById("orange");
+    orange.addEventListener("mousedown", function(e) {
+        if (!orange_clicked) {
+            orange.style.background = "rgb(146, 146, 146)";
+            if (input.value == "o" || input.value == "O") { points++; input.value = ""}
+            points++;
+            if (points == 10) {
+                points_paragraph.innerHTML = "Points: " + points + " MAX. POINTS!"; 
+                document.body.style.backgroundImage = "url('congratulation.jpg')";
+                points_paragraph.style.color = "white";
+            }
+            else points_paragraph.innerHTML = "Points: " + points;
+            orange_clicked = true;
+        }
+    })
+</script>
+
+</body>
+</html>

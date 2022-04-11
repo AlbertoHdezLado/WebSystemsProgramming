@@ -1,0 +1,59 @@
+.wrapper{
+    position: relative;
+    top: 20vh;
+  }
+  #button{
+    border: 5px solid #33e0ff;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    margin: auto;
+    background: #3363ff;
+  }
+
+  #button:hover{
+    background: #53ff78;
+  }
+
+  #main{
+    border: 5px solid #33e0ff;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    margin: auto;
+    background: #3363ff;
+  }
+
+  #main:hover{
+    background: #53ff78;
+  }
+
+  #title{
+    padding-top: 30px;
+    color: rgb(155, 0, 0);
+    text-align: center;
+    font: 1em sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    margin: auto;
+  }
+
+  #result{
+    padding-top: 100px;
+    text-align: center;
+    font: 1em sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    margin: auto;
+  }
+
+  #editBoxes{
+    
+    padding-top: 100px;
+    text-align: center;
+    margin: auto;
+  }

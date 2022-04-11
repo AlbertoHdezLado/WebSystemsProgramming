@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+    <h1>Personal Form</h1>
+    <p>Please fill out this form to
+        complete the laboratory.</p>
+
+    <!--<form action = "http://127.0.0.1:5500/Lab3/personal.html" method = "post" autocomplete = "on">-->
+    <p><label>Name:
+        <input id = "name" name = "name" type = "text" size = "25" autofocus>
+    </label></p>
+    <p><label>Last name:
+        <input id = "lastName" name="LastName" type = "text" size = "25"
+            required/>
+    </label></p>
+    <p><label for = "textList">BirthMonth:
+        <input id = "month" name="month" type = "text" id = "textList"
+            placeholder = "Select a month" list = "months" />
+        <datalist id = "months">
+            <option value = "January"></option>
+            <option value = "February"></option>
+            <option value = "March"></option>
+            <option value = "April"></option>
+            <option value = "May"></option>
+            <option value = "June"></option>
+            <option value = "July"></option>
+            <option value = "August"></option>
+            <option value = "September"></option>
+            <option value = "October"></option>
+            <option value = "November"></option>
+            <option value = "December"></option>
+        </datalist>
+    </label></p>
+    <p><label>Email:
+        <input id = "email" name="email" type = "email" placeholder = "name@domain.com"
+            required /> (name@domain.com)
+    </label></p>
+    <p><label>Tel:
+        <input id = "tel" type = "tel" id = "phone" name = "phone" placeholder = "123 456 789"
+            pattern = "[0-9]{3} [0-9]{3} [0-9]{3}"/> 
+    </label></p>
+    <p>
+        <input type = "submit" value = "Submit"/>
+        <input type = "reset" value = "Clear" />
+    </p>
+    </form>
+    <br>
+    0 <meter min = "0" max = "100" value = "78"></meter> 100
+    <br>
+    <br>
+    <details>
+        <summary>3 Trends in Computer Science Research</summary>
+        <ul>
+        <li><mark>Artificial intelligence and robotics</mark>
+        With the global robotics industry forecast to be worth US$80 billion by 2024, a large portion of this growth is down to the strength of interest and investment in artificial intelligence (AI) – one of the most controversial and intriguing areas of computer science research. The technology is still in its early stages, but tech giants like Facebook, Google and IBM are investing huge amounts of money and resources into AI research. There’s certainly no shortage of opportunities to develop real-world applications of the technology, and there’s immense scope for break-through moments in this field </li>
+        <li><mark>Big data analytics</mark>
+        Back in 2012, the Harvard Business Review branded data science the ‘sexiest job’ of the 21 century. Yes, you read that correctly. There has been a surge in demand for experts in this field and doubled efforts on the part of brands and agencies to boost salaries and attract data science talents. From banking to healthcare, big data analytics is everywhere, as companies increasingly attempt to make better use of the enormous datasets they have, in order to personalize and improve their services.</li>
+        <li><mark>Computer-assisted education</mark>
+        The use of computers and software to assist education and/or training, computer-assisted education brings many benefits and has many uses. For students with learning disabilities, for instance, it can provide personalized instruction and enable students to learn at their own pace, freeing the teacher to devote more time to each individual. The field is still growing but promising, with many educators praising its ability to allow students to engage in active, independent and play-based learning</li>
+        </ul>
+    </details>
+    <aside>What will come forward?</aside>
+</body>
+
+</html>
+
